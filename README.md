@@ -1,4 +1,6 @@
-# kartkowka
+# kartkówka - tiny helper for checking your language knowledge
+
+Type the translated text and check the answers - just test yourself!
 
 ## Project setup
 ```
