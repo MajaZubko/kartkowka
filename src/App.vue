@@ -1,28 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app-container">
+    <h1>Italiano Słowiano</h1>
+    <InputSection v-for="text in textsToTranslate" :key="text" :text-to-translate="text" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import InputSection from "@/components/InputSection";
+import textsToTranslate from './assets/data'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    InputSection,
+  },
+  data() {
+    return {textsToTranslate}
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+}
+
+.app-container {
+  margin: 0;
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial;
+  background: #fcbf49;
+  color: #003049;
 }
 </style>
